@@ -118,17 +118,17 @@ fn main() {
         Rational::new(1, 2),
         Rational::new(2, 3),
         Rational::new(1, 4),
-        Rational::new(1, 5),
+        Rational::new(2, 5),
         Rational::new(1, 6),
-        Rational::new(1, 7),
+        Rational::new(2, 7),
         Rational::new(1, 8),
-        Rational::new(1, 9)
+        Rational::new(2, 9)
     ]);
 
-    assert_eq!(seg.find((0, 4)), Rational::new(1, 5));
-    assert_eq!(seg.find((3, 6)), Rational::new(1, 7));
+    assert_eq!(seg.find((0, 4)), Rational::new(1, 4));
+    assert_eq!(seg.find((3, 6)), Rational::new(1, 6));
     assert_eq!(seg.find((1, 2)), Rational::new(2, 3));
 
-    seg.set(7, Rational::new(1, 5));
-    assert_eq!(seg.find((0, 8)), Rational::new(1, 8));
+    seg.set(7, Rational::new(2, 21));
+    assert_eq!(seg.find((0, 8)), Rational::new(2, 21));
 }
